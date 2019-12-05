@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Slider getting a BehaviorSubject</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="list">
+    <ion-item *ngFor="let item of list">
+      <ion-avatar>
+        <ion-img [src]="item.img[0]"></ion-img>
+       </ion-avatar>
+       <ion-label>{{item.name}}</ion-label>
+       <ion-button (click)="openModal(item.id)">Open Page</ion-button>
+       <ion-button (click)="openModalComponent(item.id)">Open Comp</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

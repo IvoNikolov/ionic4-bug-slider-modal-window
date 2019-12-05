@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Example 2:</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-grid *ngIf="isLoaded">
+      <ion-row>
+        <ion-col size="12">
+            <p>Example Modal Window Component with data from an Array</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+            <ion-slides pager="true" [options]="slideOpts">
+                <ion-slide *ngFor="let image of arr">
+                  <ion-img [src]="image"></ion-img>
+                </ion-slide>
+              </ion-slides>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button (click)="dismiss()"> Dismiss</ion-button>
+  <ion-content>

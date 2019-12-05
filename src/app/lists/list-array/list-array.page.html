@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Slider getting Data from an Array</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+    <ion-item *ngFor="let id of arrList" >
+       <ion-label>{{id}}</ion-label>
+       <ion-button (click)="openModal(id)">Open Modal Page</ion-button>
+       <ion-button (click)="openModalComponent(id)">Open Modal Comp</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
